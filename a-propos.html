@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | EduEvent</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo1.jpg" width="100" alt="EduEvent Logo" class="logo-img">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="evenements.html" class="nav-link">Événements</a></li>
+                    <li><a href="detail.html" class="nav-link">Détails</a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="a-propos.html" class="nav-link active">À Propos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="profil.html" class="btn btn-connect">Connexion</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-page">
+        <section class="platform-presentation">
+            <div class="presentation-container">
+                <h1 class="page-title">Notre Mission</h1>
+                <p class="presentation-text">
+                    <strong>EduEvent</strong> a été conçue avec une idée simple en tête : rassembler la communauté de la Faculté des Sciences et de Génie. Que vous soyez passionné de tech, mordu de sport ou amateur de culture, notre plateforme centralise 100% de la vie de notre campus.
+                </p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="section-container">
+                <h2 class="section-title text-center">L'équipe de développement</h2>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <img src="images/lead.JPG" alt="Photo Étudiant 1" class="team-photo">
+                        <h3 class="team-name">Leed ADOLPHE</h3>
+                        <p class="team-role">Développeur Front-End / UX Designer</p>
+                    </article>
+                    
+                    <article class="team-member">
+                        <img src="images/leed.JPG" alt="Photo Étudiant 2" class="team-photo">
+                        <h3 class="team-name">Frantz Wickensley SAINTILMOND</h3>
+                        <p class="team-role">Développeur Back-End / Intégrateur JavaScript</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Nous contacter</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactNom">Votre Nom</label>
+                            <input type="text" id="contactNom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">E-mail</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-cta">Envoyer le message</button>
+                    </form>
+                    <div id="contactMessageAlert" class="form-message"></div>
+                </div>
+
+                <div class="contact-map">
+                    <h2 class="section-title">Où nous trouver ?</h2>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15124.085189727402!2d-72.3396!3d18.5392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb9e64dc386d421%3A0x600f9a2fbb08d983!2sPort-au-Prince%2C%20Haiti!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2 class="section-title text-center">Foire Aux Questions</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            La plateforme est-elle gratuite ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Oui, l'inscription à la plateforme EduEvent et la consultation des événements sont 100% gratuites pour tous les étudiants et membres du personnel de l'université.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Comment annuler mon inscription à un événement ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Il vous suffit de vous rendre dans la rubrique "Espace Étudiant". Vous y trouverez la liste de vos participations à venir. Cliquez simplement sur le bouton rouge "Annuler l'inscription".</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Puis-je proposer un événement ?
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Pour le moment, seuls les administrateurs et les associations reconnues peuvent publier des événements. Si vous avez une idée, n'hésitez pas à nous envoyer un message via le formulaire de contact !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>EduEvent</h3>
+                <p>La plateforme officielle de centralisation et de réservation des activités universitaires du campus.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="evenements.html">Tous les événements</a></li>
+                    <li><a href="a-propos.html">À Propos & FAQ</a></li>
+                    <li><a href="profil.html">Mon Espace</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduEvent - FSG Département Informatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

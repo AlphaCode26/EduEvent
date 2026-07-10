@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EduEvent - La plateforme qui gere les evenements du campus.">
+    <title>EduEvent | Acceuil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animatons.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link" aria-label="EduEvent - Retour a l'acceuil">
+                <img src="images/logo1.jpg" alt="Logo EduEvent" class="logo-img" width="100">
+            </a>
+        
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Acceuil</a></li>
+                    <li><a href="evenements.html" class="nav-link">Evenement </a></li>
+                    <li><a href="detail.html" class="nav-link">Details</Details></a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="a-propos.html" class="nav-link">A propos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-action">
+                <a href="profil.html" class="btn btn-connect">Connexion</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-title">EduEvent - La plateforme des evenements du campus.</h1>
+                <p class="hero-subtitle">
+                    Découvrez, 
+                    participez et vibrez 
+                    au rythme des conférences, 
+                    compétitions sportives et activités 
+                    culturelles du campus.
+                </p>
+                <a href="evenements.html" class="btn btn-cta">Découvrir les événements</a>
+            </div>
+        </section>
+        <section class="featured-events">
+            <div class="section-container">
+                <h2 class="section-title">Evenements a la une</h2>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="card-image">
+                            <img src="images/book.jpg" alt="Conference tech" width="100">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-tech">Conference</span>
+                            <h3 class="event-card-title">L'intelligence artificielle en 2026.</h3>
+                            <p class="event-card-desc">Une immersion exclusive dans les dernieres avancees technologiques et ethiques de l'IA.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir les details</a>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="card-image">
+                            <img src="images/campus.png" alt="Compétition de Basket" width="100">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-sport">Sport</span>
+                            <h3 class="event-card-title">La FSG sacre champion sur la FSS.</h3>
+                            <p class="event-card-desc">Venez soutenir l'équipe de votre département lors du grand choc de la session.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir plus de details.</a>
+                        </div>
+                    </article>
+                    <article class="event-card">
+                        <div class="card-image">
+                            <img src="images/rezistans.jpg" alt="Festival de Musique" width="100">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-culture">Culture</span>
+                            <h3 class="event-card-title">Printemps Culturel Universitaire</h3>
+                            <p class="event-card-desc">Expositions d'art, scènes ouvertes et concerts live par les étudiants du campus.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir plus de details.</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <p class="stat-label">Evenements Organises</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1500">0</span>
+                    <p class="stat-label">Participants Inscrits</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span>
+                    <p class="stat-label">Categories d'Aactivites</p>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h2 class="newsletter-title">Ne ratez aucun evenements</h2>
+                <p class="newsletter-desc">Abonnez-vous a notre Newslatter pour ne rien rate</p>
+
+                <form action="newsletter-form" action="#" method="POST">
+                    <input type="email" 
+                    placeholder="Votre adresse mail" 
+                    required
+                    class="input-form">
+                    <button type="submit" class="btn btn-submit">S'abonner</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>EduEvent</h3>
+                <p>La platforme evenementiel du campus.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="evenements.html">Tous les evenements</a></li>
+                    <li><a href="a-propos.html">A Propos & FAQ</a></li>
+                    <li><a href="profil.html">Mon Espace</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="" aria-label="Facebook">Facebook</a>
+                    <a href="" aria-label="Instagram">Instagram</a>
+                    <a href="" aria-label="X (Twitter)">X / Twitter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy EduEvent - FSG Departement Informatique. Tous droits reserves.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

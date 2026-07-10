@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de l'événement | EduEvent</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo1.jpg" width="100" alt="EduEvent Logo" class="logo-img">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="evenements.html" class="nav-link">Événements</a></li>
+                    <li><a href="detail.html" class="nav-link active">Détails</a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="profil.html" class="btn btn-connect">Connexion</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-page">
+        <section class="event-banner">
+            <div class="banner-overlay">
+                <h1 class="banner-title">L'Intelligence Artificielle en 2026</h1>
+            </div>
+        </section>
+
+        <div class="detail-container">
+            
+            <div class="event-info">
+                <a href="evenements.html" class="btn btn-secondary btn-back">← Retour à la liste</a>
+                
+                <h2 class="info-title">À propos de cet événement</h2>
+                <p class="info-desc">Rejoignez-nous pour une immersion exclusive dans les dernières avancées technologiques et éthiques de l'IA. Des experts de renommée internationale partageront leurs visions sur l'impact de l'IA dans notre quotidien, l'éducation et le monde professionnel d'ici la fin de la décennie.</p>
+                
+                <ul class="info-list">
+                    <li><strong>📅 Date :</strong> 15 Août 2026</li>
+                    <li><strong>⏰ Heure :</strong> 14h00 - 17h30</li>
+                    <li><strong>📍 Lieu :</strong> Amphithéâtre A, Faculté des Sciences et de Génie</li>
+                    <li><strong>👤 Organisateur :</strong> Département Informatique</li>
+                </ul>
+
+                <div class="social-share">
+                    <h3>Partager cet événement :</h3>
+                    <div class="share-buttons">
+                        <a href="#" class="btn-share facebook">Facebook</a>
+                        <a href="#" class="btn-share twitter">X (Twitter)</a>
+                        <a href="#" class="btn-share linkedin">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="event-registration">
+                <h3 class="registration-title">Réserver ma place</h3>
+                
+                <div class="seats-counter">
+                    Places restantes : <span id="placesRestantes">45</span>
+                </div>
+
+                <form id="inscriptionForm" class="registration-form">
+                    <div class="form-group">
+                        <label for="nomInput">Nom et Prénom *</label>
+                        <input type="text" id="nomInput" placeholder="Ex: Jean Dupont" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emailInput">E-mail universitaire *</label>
+                        <input type="email" id="emailInput" placeholder="jean.dupont@etudiant.fsg.edu" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="matriculeInput">Matricule Étudiant *</label>
+                        <input type="text" id="matriculeInput" placeholder="Ex: 20261234" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-cta btn-full">S'inscrire à l'événement</button>
+                </form>
+
+                <div id="formMessage" class="form-message"></div>
+            </aside>
+        </div>
+
+        <section class="event-comments">
+            <div class="comments-container">
+                <h2>Commentaires & Témoignages</h2>
+                
+                <article class="comment-card">
+                    <div class="comment-header">
+                        <strong>Marie L.</strong> <span class="comment-date">- 10 Août 2026</span>
+                    </div>
+                    <p>J'ai hâte d'y assister ! Les intervenants annoncés sont incroyables.</p>
+                </article>
+
+                <article class="comment-card">
+                    <div class="comment-header">
+                        <strong>Paul M.</strong> <span class="comment-date">- 12 Août 2026</span>
+                    </div>
+                    <p>Est-ce que la conférence sera enregistrée pour ceux qui ont cours à cette heure-là ?</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>EduEvent</h3>
+                <p>La plateforme officielle de centralisation et de réservation des activités universitaires du campus.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="evenements.html">Tous les événements</a></li>
+                    <li><a href="a-propos.html">À Propos & FAQ</a></li>
+                    <li><a href="profil.html">Mon Espace</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduEvent - FSG Département Informatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>

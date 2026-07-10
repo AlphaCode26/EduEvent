@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Étudiant | EduEvent</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo1.jpg" width="100" alt="EduEvent Logo" class="logo-img">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="evenements.html" class="nav-link">Événements</a></li>
+                    <li><a href="detail.html" class="nav-link">Détails</a></li>
+                    <li><a href="profil.html" class="nav-link active">Profil</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#auth-section" id="navConnectBtn" class="btn btn-connect">Connexion</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="profil-page">
+        
+        <section id="auth-section" class="auth-container">
+            <div class="auth-box">
+                <h2 class="auth-title">Déjà inscrit ?</h2>
+                <p class="auth-desc">Connectez-vous pour accéder à votre tableau de bord.</p>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail universitaire</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Mot de passe</label>
+                        <input type="password" id="loginPassword" required minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-cta btn-full">Se connecter</button>
+                </form>
+            </div>
+
+            <div class="auth-box">
+                <h2 class="auth-title">Nouveau sur EduEvent ?</h2>
+                <p class="auth-desc">Créez votre compte étudiant en quelques secondes.</p>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="regName">Nom complet</label>
+                        <input type="text" id="regName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">E-mail universitaire</label>
+                        <input type="email" id="regEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Mot de passe</label>
+                        <input type="password" id="regPassword" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm">Confirmer le mot de passe</label>
+                        <input type="password" id="regConfirm" required minlength="6">
+                    </div>
+                    <div id="registerMessage" class="form-message"></div>
+                    <button type="submit" class="btn btn-secondary btn-full">Créer mon compte</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="dashboard-section" class="dashboard-container hidden">
+            
+            <aside class="student-profile-card">
+                <div class="profile-header">
+                    <img src="images/avatar-placeholder.png" alt="Photo de profil" class="profile-avatar">
+                    <h2 id="displayStudentName" class="profile-name">Jean Dupont</h2>
+                    <p class="profile-badge">Étudiant</p>
+                </div>
+                <div class="profile-details">
+                    <ul class="profile-list">
+                        <li><strong>Faculté :</strong> Sciences et Génie (FSG)</li>
+                        <li><strong>Programme :</strong> Licence Informatique</li>
+                        <li><strong>Niveau :</strong> L3</li>
+                        <li><strong>Année :</strong> 2025-2026</li>
+                    </ul>
+                </div>
+                <button id="logoutBtn" class="btn btn-secondary btn-full btn-logout">Se déconnecter</button>
+            </aside>
+
+            <div class="student-events">
+                <h2 class="dashboard-title">Mes participations à venir</h2>
+                
+                <div class="events-list-view" id="myEventsList">
+                    
+                    <article class="event-card dashboard-card">
+                        <div class="card-image">
+                            <img src="images/events/conference.jpg" alt="Conférence">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="event-card-title">L'Intelligence Artificielle en 2026</h3>
+                            <p class="event-date">📅 15 Août 2026 - 14h00</p>
+                            <p class="event-location">📍 Amphithéâtre A, FSG</p>
+                            <div class="card-actions">
+                                <a href="detail.html" class="btn btn-secondary">Voir</a>
+                                <button class="btn btn-cancel">Annuler l'inscription</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="event-card dashboard-card">
+                        <div class="card-image">
+                            <img src="images/events/sport.jpg" alt="Sport">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="event-card-title">Tournoi Inter-Facultés de Basket</h3>
+                            <p class="event-date">📅 20 Août 2026 - 09h00</p>
+                            <p class="event-location">📍 Gymnase Universitaire</p>
+                            <div class="card-actions">
+                                <a href="detail.html" class="btn btn-secondary">Voir</a>
+                                <button class="btn btn-cancel">Annuler l'inscription</button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>EduEvent</h3>
+                <p>La plateforme officielle de centralisation et de réservation des activités universitaires du campus.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="evenements.html">Tous les événements</a></li>
+                    <li><a href="a-propos.html">À Propos & FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduEvent - FSG Département Informatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profil.js"></script>
+</body>
+</html>

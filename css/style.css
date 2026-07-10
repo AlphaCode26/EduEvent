@@ -1,0 +1,1038 @@
+/* ==========================================
+   1. VARIABLES & RESET
+   ========================================== */
+:root {
+    /* Couleurs de la charte */
+    --primary: #66CCCC;       /* Turquoise principal */
+    --primary-dark: #54AFAC;  /* Turquoise secondaire */
+    --dark: #221F26;          /* Gris très foncé / Fond sombre */
+    --light-bg: #F7F7F7;      /* Fond clair */
+    --white: #FFFFFF;
+    --gray-text: #666666;
+
+    /* Polices */
+    --font-titles: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ==========================================
+   2. BOUTONS GENERAUX
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.8rem;
+    font-family: var(--font-titles);
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-connect {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--white);
+}
+
+.btn-cta {
+    background-color: var(--primary);
+    color: var(--dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.btn-secondary {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+}
+
+.btn-submit {
+    background-color: var(--primary);
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/* ==========================================
+   3. MAIN HEADER
+   ========================================== */
+.main-header {
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    width: 200px; /* Ajustez selon la proportion de votre logo */
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--dark);
+    font-family: var(--font-titles);
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+
+/* ==========================================
+   4. HERO SECTION
+   ========================================== */
+.hero-section {
+    background: linear-gradient(rgba(34, 31, 38, 0.7), rgba(34, 31, 38, 0.8)), url('../images/chcl.webp') no-repeat center center/cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 4rem 2rem;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-family: var(--font-titles);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+}
+
+/* ==========================================
+   5. FEATURED EVENTS (CARTES)
+   ========================================== */
+.featured-events {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: var(--font-titles);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Grille pour aligner les 3 cartes */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.event-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eef2f5;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.event-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    background-color: var(--light-bg);
+}
+
+/* Couleurs des petits badges selon le thème */
+.badge-tech { color: #2196F3; background-color: #E3F2FD; }
+.badge-sport { color: #4CAF50; background-color: #E8F5E9; }
+.badge-culture { color: #9C27B0; background-color: #F3E5F5; }
+
+.event-card-title {
+    font-family: var(--font-titles);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.event-card-desc {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   6. STATS SECTION
+   ========================================== */
+.stats-section {
+    background-color: var(--light-bg);
+    padding: 4rem 2rem;
+    border-top: 1px solid #eef2f5;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 1rem;
+}
+
+.stat-number {
+    font-family: var(--font-titles);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: block;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+/* ==========================================
+   7. NEWSLETTER SECTION
+   ========================================== */
+.newsletter-section {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter-title {
+    font-family: var(--font-titles);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-desc {
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.form-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #444;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--white);
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* ==========================================
+   8. MAIN FOOTER
+   ========================================== */
+.main-footer {
+    background-color: #1a181e; /* Légèrement plus sombre que var(--dark) pour créer de la profondeur */
+    color: var(--white);
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-column {
+    flex: 2;
+}
+
+.footer-column h3 {
+    font-family: var(--font-titles);
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.footer-column p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links a {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+/* Ligne inférieure de Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20rem;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   12. PAGE ÉVÉNEMENTS - CONTRÔLES & VUES
+   ========================================== */
+.page-header {
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.controls-section {
+    background-color: var(--light-bg);
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.controls-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    width: 300px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.filters-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: var(--font-body);
+    cursor: pointer;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-view {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-titles);
+}
+
+.btn-view.active {
+    background-color: var(--dark);
+    color: var(--white);
+    border-color: var(--dark);
+}
+
+/* --- VUE EN LISTE (Toggle JS) --- */
+.events-list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.events-list-view .event-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.events-list-view .card-image {
+    width: 300px;
+    height: 100%;
+}
+
+.events-list-view .card-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .events-list-view .event-card {
+        flex-direction: column; /* Repasse en colonne sur mobile même en mode liste */
+    }
+    .events-list-view .card-image {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   13. PAGE DÉTAIL D'UN ÉVÉNEMENT
+   ========================================== */
+
+/* Bannière */
+.event-banner {
+    background: url('../images/campus.png') no-repeat center center/cover;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-overlay {
+    background: linear-gradient(to top, rgba(34, 31, 38, 0.9), transparent);
+    width: 100%;
+    padding: 3rem 2rem;
+}
+
+.banner-title {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--white);
+    font-family: var(--font-titles);
+    font-size: 2.8rem;
+}
+
+/* Conteneur principal 2 colonnes */
+.detail-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.event-info {
+    flex: 2; /* Prend 2/3 de l'espace */
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    background-color: var(--light-bg);
+    color: var(--dark);
+}
+
+.info-title {
+    font-family: var(--font-titles);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.info-desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--gray-text);
+}
+
+.info-list {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.info-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-share {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.btn-share.facebook { background-color: #1877F2; color: #fff; }
+.btn-share.twitter { background-color: #000; color: #fff; }
+.btn-share.linkedin { background-color: #0A66C2; color: #fff; }
+
+/* Formulaire d'inscription (Colonne droite) */
+.event-registration {
+    flex: 1; /* Prend 1/3 de l'espace */
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.registration-title {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.seats-counter {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.seats-counter.sold-out {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+/* Messages du formulaire */
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Masqué par défaut */
+}
+
+.form-message.success {
+    display: block;
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #C8E6C9;
+}
+
+.form-message.error {
+    display: block;
+    background-color: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #FFCDD2;
+}
+
+/* Commentaires */
+.event-comments {
+    background-color: var(--light-bg);
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+}
+
+.comments-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comment-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.comment-header {
+    margin-bottom: 0.5rem;
+}
+
+.comment-date {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE DETAIL PAGE --- */
+@media screen and (max-width: 992px) {
+    .detail-container {
+        flex-direction: column;
+    }
+    .event-registration {
+        position: static;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================
+   14. PAGE ESPACE ÉTUDIANT (PROFIL)
+   ========================================== */
+
+/* Classe utilitaire pour cacher des éléments en JavaScript */
+.hidden {
+    display: none !important;
+}
+
+.profil-page {
+    background-color: var(--light-bg);
+    min-height: 80vh;
+    padding: 4rem 2rem;
+}
+
+/* Section Authentification */
+.auth-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.auth-box {
+    flex: 1;
+    padding: 3rem;
+}
+
+.auth-box:first-child {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.auth-box:first-child input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #444;
+    color: var(--white);
+}
+
+.auth-title {
+    font-family: var(--font-titles);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-desc {
+    margin-bottom: 2rem;
+    color: var(--gray-text);
+}
+
+.auth-box:first-child .auth-desc {
+    color: #aaa;
+}
+
+/* Section Tableau de bord (Connecté) */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Carte de profil gauche */
+.student-profile-card {
+    flex: 1;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--primary);
+}
+
+.profile-name {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+.profile-badge {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.profile-details {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.profile-list li {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.btn-logout {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #d32f2f;
+}
+
+/* Liste des événements droite */
+.student-events {
+    flex: 2;
+}
+
+.dashboard-title {
+    font-family: var(--font-titles);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Surcharge de la vue liste pour le dashboard */
+.dashboard-card {
+    background-color: var(--white);
+    padding-right: 1.5rem;
+}
+
+.dashboard-card .card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Bouton d'annulation */
+.btn-cancel {
+    background-color: transparent;
+    border: 2px solid #f44336;
+    color: #f44336;
+}
+
+.btn-cancel:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* --- RESPONSIVE PROFIL --- */
+@media screen and (max-width: 992px) {
+    .auth-container, .dashboard-container {
+        flex-direction: column;
+    }
+    .student-profile-card {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   15. PAGE À PROPOS & CONTACT & FAQ
+   ========================================== */
+
+/* Présentation & Textes */
+.platform-presentation {
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.presentation-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.presentation-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* L'Équipe (Binôme) */
+.team-section {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    text-align: center;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem auto;
+    border: 4px solid var(--primary);
+}
+
+.team-name {
+    font-family: var(--font-titles);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+}
+
+/* Section Contact & Carte */
+.contact-section {
+    background-color: var(--light-bg);
+    padding: 5rem 2rem;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+}
+
+.contact-form-wrapper, .contact-map {
+    flex: 1;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    resize: vertical;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Accordéon FAQ */
+.faq-section {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #eef2f5;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    background-color: var(--light-bg);
+    border: none;
+    font-family: var(--font-titles);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e2e8ec;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: normal;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: var(--white);
+}
+
+.accordion-content p {
+    padding: 1.5rem;
+    color: var(--gray-text);
+}
+
+/* Classes dynamiques JS pour l'accordéon */
+.accordion-item.active .accordion-content {
+    max-height: 300px; /* Valeur suffisamment grande pour afficher le texte */
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg); /* Transforme le "+" en "x" */
+}
+
+/* --- RESPONSIVE CONTACT --- */
+@media screen and (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

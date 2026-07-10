@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous les Événements | EduEvent</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo1.jpg" width="100" alt="EduEvent Logo" class="logo-img">
+            </a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="evenements.html" class="nav-link active">Événements</a></li>
+                    <li><a href="detail.html" class="nav-link">Détails</a></li>
+                    <li><a href="profil.html" class="nav-link">Espace Étudiant</a></li>
+                    <li><a href="a-propos.html" class="nav-link">À Propos</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="profil.html" class="btn btn-connect">Connexion</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="events-page">
+        <section class="page-header">
+            <div class="page-header-container">
+                <h1 class="page-title">Découvrez nos événements</h1>
+                <p class="page-subtitle">Trouvez les activités qui vous correspondent sur le campus.</p>
+            </div>
+        </section>
+
+        <section class="controls-section">
+            <div class="controls-container">
+                
+                <div class="search-box">
+                    <input type="search" id="searchInput" placeholder="Rechercher un événement (ex: Basket, IA...)">
+                </div>
+
+                <div class="filters-box">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">Toutes les catégories</option>
+                        <option value="tech">Conférences & Tech</option>
+                        <option value="sport">Sports</option>
+                        <option value="culture">Culture & Arts</option>
+                        <option value="atelier">Ateliers pratiques</option>
+                    </select>
+
+                    <select id="dateFilter" class="filter-select">
+                        <option value="all">Toutes les dates</option>
+                        <option value="today">Aujourd'hui</option>
+                        <option value="week">Cette semaine</option>
+                        <option value="month">Ce mois-ci</option>
+                    </select>
+                </div>
+
+                <div class="view-toggle">
+                    <button id="btnGrid" class="btn-view active" aria-label="Vue en grille">Grille</button>
+                    <button id="btnList" class="btn-view" aria-label="Vue en liste">Liste</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="events-list-section">
+            <div class="section-container">
+                
+                <div id="events-container" class="events-grid">
+                    
+                    <article class="event-card" data-category="tech" data-date="2026-08-15">
+                        <div class="card-image">
+                            <img src="images/campus.png" alt="Conférence Tech">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-tech">Conférence</span>
+                            <h3 class="event-card-title">L'Intelligence Artificielle en 2026</h3>
+                            <div class="event-meta">
+                                <p class="event-date">📅 15 Août 2026 - 14h00</p>
+                                <p class="event-location">📍 Amphithéâtre A, FSG</p>
+                            </div>
+                            <p class="event-card-desc">Une immersion exclusive dans les dernières avancées technologiques et éthiques de l'IA.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir le détail</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card" data-category="sport" data-date="2026-08-20">
+                        <div class="card-image">
+                            <img src="images/rezistans.jpg" alt="Compétition de Basket">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-sport">Sport</span>
+                            <h3 class="event-card-title">Tournoi Inter-Facultés de Basket</h3>
+                            <div class="event-meta">
+                                <p class="event-date">📅 20 Août 2026 - 09h00</p>
+                                <p class="event-location">📍 Gymnase Universitaire</p>
+                            </div>
+                            <p class="event-card-desc">Venez soutenir l'équipe de votre département lors du grand choc de la session.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir le détail</a>
+                        </div>
+                    </article>
+
+                     <article class="event-card" data-category="culture" data-date="2026-08-25">
+                        <div class="card-image">
+                            <img src="images/campus.png" alt="Festival de Musique">
+                        </div>
+                        <div class="card-content">
+                            <span class="event-badge badge-culture">Culture</span>
+                            <h3 class="event-card-title">Printemps Culturel Universitaire</h3>
+                            <div class="event-meta">
+                                <p class="event-date">📅 25 Août 2026 - 18h00</p>
+                                <p class="event-location">📍 Esplanade Centrale</p>
+                            </div>
+                            <p class="event-card-desc">Expositions d'art, scènes ouvertes et concerts live par les étudiants du campus.</p>
+                            <a href="detail.html" class="btn btn-secondary">Voir le détail</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="pagination-section">
+                    <button id="loadMoreBtn" class="btn btn-connect">Charger plus d'événements</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>EduEvent</h3>
+                <p>La plateforme officielle de centralisation et de réservation des activités universitaires du campus.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="evenements.html">Tous les événements</a></li>
+                    <li><a href="a-propos.html">À Propos & FAQ</a></li>
+                    <li><a href="profil.html">Mon Espace</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="X (Twitter)">X / Twitter</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduEvent - FSG Département Informatique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/evenements.js"></script>
+</body>
+</html>
